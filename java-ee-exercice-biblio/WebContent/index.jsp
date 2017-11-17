@@ -10,12 +10,13 @@
 <title>WELCOME TO THE LIBRARY</title>
 </head>
 <body>
-	<h1>WELCOME TO THE LIBRARY</h1>
-	
+
+				<h1> WELCOME TO THE LIBRARY <br> OF PHILOU</h1>
 	
 	<br>
+
 	<a href="<c:url value="/author/listauthor"/>">AUTEURS</a>
-	
+
 	<br>
 	<a href="<c:url value="/book/listbook"/>">LIVRES</a>
 
@@ -24,10 +25,11 @@
 
 	<br>
 	<a href="<c:url value="/subscriber/listsub"/>">ABONNES</a>
-	
+
 	<br>
 	<a href="<c:url value="/catalog/listcatalog"/>">CATALOGUES</a>
-	
 
+  <script src="jquery-3.2.1.min.js"></script>
+	<script type="text/javascript" src="recherche.js"></script>
 </body>
 </html>
