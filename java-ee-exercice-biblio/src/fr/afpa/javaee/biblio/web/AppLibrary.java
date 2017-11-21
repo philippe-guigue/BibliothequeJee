@@ -216,8 +216,7 @@ public class AppLibrary extends HttpServlet {
 		// on demande l'affichage de la vue add.jsp
 		if (catalogs == null) {
 			getServletContext().getRequestDispatcher("/WEB-INF/views/book/add.jsp").forward(request, response);
-		} else if (catalogs == null) {
-			getServletContext().getRequestDispatcher("/WEB-INF/views/book/update.jsp").forward(request, response);
+		
 		}
 	}
 

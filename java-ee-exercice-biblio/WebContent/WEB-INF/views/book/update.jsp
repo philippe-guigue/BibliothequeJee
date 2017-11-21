@@ -43,7 +43,7 @@
 					size="20">
 				<select name="listC">
 						<c:forEach var="catalog" items="${catalogs}">
-						<option value="${catalog.id} ${catalog.title}">${catalog.id} - ${catalog.title}</option>
+						<option value="${catalog.id_catalogue} ${catalog.description}">${catalog.id_catalogue} - ${catalog.description}</option>
 							
 						</c:forEach>
 

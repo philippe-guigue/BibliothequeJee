@@ -7,7 +7,7 @@
 	int isbn= (Integer) request.getAttribute("isbn");
 	String title = (String) request.getAttribute("titre");
 	String subtitle = (String) request.getAttribute("sousTitre");
-	String Auteur = (String) request.getAttribute("auhtor");
+	String Auteur = (String) request.getAttribute("author");
 	String catalog = (String) request.getAttribute("catalog");
 %>
 <html>
@@ -40,7 +40,7 @@
 				<td>Catalogue</td>
 				<td><select name="listC">
 						<c:forEach var="catalog" items="${catalogs}">
-						<option value="${catalog.id} ${catalog.title}">${catalog.id} - ${catalog.title}</option>
+						<option value="${catalog.id_catalogue} ${catalog.description}">${catalog.id_catalogue} - ${catalog.description}</option>
 							
 						</c:forEach>
 
