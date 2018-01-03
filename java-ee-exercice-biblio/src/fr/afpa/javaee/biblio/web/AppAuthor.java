@@ -69,15 +69,12 @@ public class AppAuthor extends HttpServlet {
 
 		// on récupère la liste des auteurs avec la couche service
 		authors = serviceauthor.getAll();
-		// System.out.println(authors);
 		// on insère le résultat dans la requête, de façon à pouvoir l'exploiter dans la
 		// JSP
 		request.setAttribute("authors", authors);
 		// on demande l'affichage de la vue add.jsp
 		getServletContext().getRequestDispatcher("/WEB-INF/views/author/listauthor.jsp").forward(request, response);
 	}
-	// getServletContext().getRequestDispatcher("/WEB-INF/views/add.jsp").forward(request,
-	// response);
 
 	public void doAdd(HttpServletRequest request, HttpServletResponse response) throws IOException, ServletException {
 		getServletContext().getRequestDispatcher("/WEB-INF/views/author/add.jsp").forward(request, response);

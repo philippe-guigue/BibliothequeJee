@@ -9,18 +9,18 @@ import java.util.ArrayList;
 
 import fr.afpa.javaee.biblio.model.Author;
 import fr.afpa.javaee.biblio.model.Book;
-import fr.afpa.javaee.biblio.model.Catalog;
-import fr.afpa.javaee.biblio.model.Personne;
 
 public class DaoAuthorSql implements IDaoAuthor {
 
-	private String url = "jdbc:mysql://localhost:3306/bibliotheque";
+	private String url = "jdbc:mysql://localhost:3306/bibliotheque?useUnicode=true&useJDBCCompliantTimezoneShift=true&useLegacyDatetimeCode=false&serverTimezone=UTC";
 	private String login = "root";
 	private String password = "WINDSURF";
 	private Connection connection = null;
 	private Statement statement = null;
+	// Use only one result set object
 	private ResultSet result = null;
-	private ResultSet rsRequeteGetAll = null;
+	
+	//These should be local variables instead
 	private Author author;
 	private ArrayList<Author> auteurs = new ArrayList<Author>();
 	private ArrayList<Book> books = new ArrayList<Book>();
@@ -32,7 +32,7 @@ public class DaoAuthorSql implements IDaoAuthor {
 	private void init() {
 		try {
 			// chargement du driver
-			Class.forName("com.mysql.jdbc.Driver");
+			Class.forName("com.mysql.cj.jdbc.Driver");
 		} catch (ClassNotFoundException e) {
 			e.printStackTrace();
 		}
@@ -45,7 +45,6 @@ public class DaoAuthorSql implements IDaoAuthor {
 			connection = DriverManager.getConnection(url, login, password);
 			statement = connection.createStatement();
 			String requeteDeleteBook = "DELETE FROM auteur  WHERE id_auteur = '" + id + "'";
-			System.out.println(requeteDeleteBook);
 			java.sql.PreparedStatement ps;
 			ps = connection.prepareStatement(requeteDeleteBook);
 			ps.executeUpdate(requeteDeleteBook);
@@ -78,7 +77,6 @@ public class DaoAuthorSql implements IDaoAuthor {
 
 			}
 		} catch (SQLException e) {
-			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
 

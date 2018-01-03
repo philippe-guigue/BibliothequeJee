@@ -13,7 +13,7 @@ import fr.afpa.javaee.biblio.model.Copy;
 import fr.afpa.javaee.biblio.model.Subscriber;
 
 public class DaoCatalogSql implements IDaoCatalog {
-	private String url = "jdbc:mysql://localhost:3306/bibliotheque";
+	private String url = "jdbc:mysql://localhost:3306/bibliotheque?useUnicode=true&useJDBCCompliantTimezoneShift=true&useLegacyDatetimeCode=false&serverTimezone=UTC";
 	private String login = "root";
 	private String password = "WINDSURF";
 	private Connection connection = null;
@@ -33,7 +33,7 @@ public class DaoCatalogSql implements IDaoCatalog {
 	private void init() {
 		try {
 			// chargement du driver
-			Class.forName("com.mysql.jdbc.Driver");
+			Class.forName("com.mysql.cj.jdbc.Driver");
 		} catch (ClassNotFoundException e) {
 			e.printStackTrace();
 		}

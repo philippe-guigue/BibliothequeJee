@@ -1,0 +1,51 @@
+html {
+    /*font definition*/
+    font-family: "Montserrat";
+}
+
+body {
+    /*Background properties*/
+    background: url(../img/biblio.jpg);
+    background-attachment: fixed;
+    background-size: cover;
+    background-color: snow;
+    background-position: 0px 0px;
+    height: 100%;
+    width: 100%;
+    
+    /***no-repeat except homepage***/
+    /*background-repeat: no-repeat;     /*<-- active/desactive background mouvement <-- TODO */
+    /***only homepage***/
+    background-repeat: repeat-x;
+    animation: animatedBackground 40s linear infinite;
+}
+
+h1 {
+    
+    text-align: center;
+ 	color:midnightblue;
+ 
+ 	
+    
+}
+
+
+a {
+
+	font-weight:bold;
+	color:seashell;
+	padding-left:10em;
+	padding-inline-start: 35em;
+	line-height: 10;
+}
+
+/*animation homePage background*/
+@keyframes animatedBackground {
+    from {
+        background-position: 0 0;
+    }
+    to {
+        background-position: 100% 0;
+    }
+}
+
