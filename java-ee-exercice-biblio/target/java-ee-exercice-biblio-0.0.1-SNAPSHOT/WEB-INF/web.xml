@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns="http://xmlns.jcp.org/xml/ns/javaee"
+	xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd"
+	id="WebApp_ID" version="3.1">
+	<display-name>java-ee-exercice-biblio</display-name>
+	<welcome-file-list>
+
+		<welcome-file>index.jsp</welcome-file>
+
+	</welcome-file-list>
+	<servlet>
+		<servlet-name>biblio</servlet-name>
+		<servlet-class>fr.afpa.javaee.biblio.web.AppLibrary</servlet-class>
+	</servlet>
+	<servlet>
+		<servlet-name>authors</servlet-name>
+		<servlet-class>fr.afpa.javaee.biblio.web.AppAuthor</servlet-class>
+	</servlet>
+	<servlet>
+		<servlet-name>subscribers</servlet-name>
+		<servlet-class>fr.afpa.javaee.biblio.web.AppSub</servlet-class>
+	</servlet>
+	<servlet>
+		<servlet-name>copies</servlet-name>
+		<servlet-class>fr.afpa.javaee.biblio.web.AppCopy</servlet-class>
+	</servlet>
+	<servlet>
+		<servlet-name>catalog</servlet-name>
+		<servlet-class>fr.afpa.javaee.biblio.web.AppCatalog</servlet-class>
+	</servlet>
+	<!-- Mapping Servlet biblio -->
+	<servlet-mapping>
+		<servlet-name>biblio</servlet-name>
+		<url-pattern>/book/*</url-pattern>
+	
+	</servlet-mapping>
+	<!-- Mapping Servlet authors -->
+	<servlet-mapping>
+		<servlet-name>authors</servlet-name>
+		<url-pattern>/author/*</url-pattern>
+	</servlet-mapping>
+	<!-- Mapping Servlet subscribers -->
+	<servlet-mapping>
+		<servlet-name>subscribers</servlet-name>
+		<url-pattern>/subscriber/*</url-pattern>
+	</servlet-mapping>
+	<!-- Mapping Servlet copies -->
+	<servlet-mapping>
+		<servlet-name>copies</servlet-name>
+		<url-pattern>/copy/*</url-pattern>
+	</servlet-mapping>
+	<!-- Mapping Servlet catalog-->
+		<servlet-mapping>
+		<servlet-name>catalog</servlet-name>
+		<url-pattern>/catalog/*</url-pattern>
+	</servlet-mapping>
+</web-app>

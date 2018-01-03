@@ -1,0 +1,112 @@
+html {
+    /*font definition*/
+    font-family: "Montserrat";
+}
+
+body {
+    /*Background properties*/
+    background: url(../img/Bibliotheque.jpg);
+    background-attachment: fixed;
+    background-size: cover;
+    background-color: snow;
+    background-position: 0px 0px;
+    height: 100%;
+    width: 100%;
+    
+    /***no-repeat except homepage***/
+    /*background-repeat: no-repeat;     /*<-- active/desactive background mouvement <-- TODO */
+    /***only homepage***/
+    background-repeat: repeat-x;
+    animation: animatedBackground 40s linear infinite;
+}
+
+h1 {
+    
+    text-align: center;
+ 	color:aqua;
+ 	size:auto;
+    
+}
+a{
+	color:blue;
+	height: 50px; 
+    width:50px;
+	text-align: center;
+    vertical-align: middle;
+}
+table {
+	align:center;
+	margin : auto;
+	bordercolor: black;
+	cellspacing : 4;
+	cellpading :3;
+	
+	
+}
+#search {
+   -webkit-appearance: textfield;
+   -webkit-box-sizing: content-box;
+}
+
+#list{
+	
+	background-color: black;
+}
+
+td{
+	height: 50px; 
+    width:50px;
+	color:white;
+	text-align: center;
+    vertical-align: middle;
+    padding:45px;
+}
+
+th{
+	color : purple;
+	padding:15px;
+}
+#searchbar {
+	position: relative;
+	width: 1040px;
+	height: auto;
+}
+
+.formulaire {
+	display: inline-block;
+}
+
+.formulaire .champ {
+	width: 200px;
+	height: 15px;
+	-webkit-appearance: textfield;
+   -webkit-box-sizing: content-box;
+	
+}
+
+.formulaire .bouton {
+	background-image: url(../img/search.png);
+	background-size: contain;
+	background-repeat: no-repeat;
+	width: 20px;
+	padding: 0;
+	border-radius: 10px;
+}
+
+datalist{
+	display:none;
+}
+
+img{
+	width: 100px;
+}
+/*animation homePage background*/
+@keyframes animatedBackground {
+    from {
+        background-position: 0 0;
+    }
+    to {
+        background-position: 100% 0;
+    }
+}
+

@@ -7,12 +7,23 @@ import fr.afpa.javaee.biblio.model.Copy;
 
 public interface IDaoCopy {
 	
-public void  DeleteCopy(int id);
+	/**
+	 * @param id
+	 */
+	public void DeleteCopy(int id);
     
+	/**
+	 * 
+	 * @return
+	 */
 	public ArrayList<Copy> getAll();
 	
 	public Copy getOne(int id);
 	
+	/**
+	 * @param id
+	 * @return
+	 */
 	public Copy modifyOne(int id);
 	
 	public void addCopy(Copy c);
