@@ -12,7 +12,6 @@
 <body>
 	<h1>Liste des livres</h1>
 
-
 	<a href="<c:url value="/"/>"><input type="button"
 		value="Retour page d'accueil"></a>
 
@@ -39,12 +38,8 @@
 				</c:forEach>
 			</datalist>
 			<input class="bouton" type="submit" value="" />
-
 		</form>
-""
 	</div>
-
-
 	<hr>
 
 	<a href="<c:url value="/book/add"/>"><input type="button"
@@ -62,7 +57,6 @@
 			<th>Auteur Nom</th>
 			<th>Auteur Prenom</th>
 			<th>Catalogue</th>
-
 		</tr>
 
 		<c:forEach var="livre" items="${books}">
@@ -76,7 +70,6 @@
 					<button id="button">
 						<img src="../img/fight.jpg" value="">
 					</button></td>
-				<!--  <td><a href="<c:url value="/details?id=${livre.isbn}"/>">Details</a></td>-->
 				<td><a
 					href="<c:url value="/book/update?id=${livre.isbn}&title=${livre.title}&subtitle=${livre.subtitle}&catalog=${livre.nomCatalogue}&authorName=${livre.nomAuteur}&authorSurname=${livre.prenomAuteur}"/>">Modifier</a></td>
 				<td><a
@@ -85,8 +78,5 @@
 		</c:forEach>
 	</table>
 	<br>
-
-
-
 </body>
 </html>
